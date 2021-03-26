@@ -1,1 +1,1 @@
-web: gunicorn web-project-galajat-test.wsgi --log-file -
+web: gunicorn web-project-galajat-2021.wsgi --log-file -
