@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'web-project-galajat-2021.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'songlist.apps.SonglistConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
