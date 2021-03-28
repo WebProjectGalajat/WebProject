@@ -1,1 +1,2 @@
-web: gunicorn web-project-galajat-test.wsgi --log-file -
+web: gunicorn WebProjectSpotify.wsgi --log-file -
+release: python3 WebProjectSpotify/manage.py migrate
