@@ -1,1 +1,1 @@
-web: gunicorn web-project-galajat-2021.wsgi --log-file -
+web: gunicorn WebProjectSpotify.wsgi --log-file -
