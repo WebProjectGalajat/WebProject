@@ -11,3 +11,10 @@
 - Carpeta WebProjectSpotify de dins: Fitxers de coses del projecte (?)
 - Carpeta songlist: App de django
 
+## Com fer deploy (HEROKU)
+- *heroku login*
+- Afegir el remot de l'aplicació *git remote add heroku https://git.heroku.com/<nom_aplicacio_heroku>.git*
+- Modificar el que sigui
+- *git add -A*
+- *git commit -m "missatge commit"*
+- *git push heroku* per pujar els fitxers a Heroku, que farà un deploy automàtic
