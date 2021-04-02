@@ -13,6 +13,7 @@
 
 ## Com fer deploy (HEROKU)
 - *heroku login*
+- Fer *git remote -v* per veure si el remot de heroku hi és, si no hi és afegirlo
 - Afegir el remot de l'aplicació *git remote add heroku https://git.heroku.com/<nom_aplicacio_heroku>.git*
 - Modificar el que sigui
 - *git add -A*
