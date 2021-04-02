@@ -1,3 +1,2 @@
-web: gunicorn WebProjectSpotify.wsgi --log-file -
-release: python3 WebProjectSpotify/manage.py migrate
-runs: python3 WebProjectSpotify/manage.py runserver
+web: gunicorn WebProjectSpotify/WebProjectSpotify.wsgi --log-file -
+release: python3 manage.py migrate
