@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'u1*=yy4&ih_wej98c0j^2=&or+s@i9z0_txpebgka*_kg+iyq('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -74,7 +74,18 @@ WSGI_APPLICATION = 'WebProjectSpotify.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'djangostack_mysql',
+#        'USER': 'admin',
+#        'PASSWORD': '1234',
+#        'HOST': '127.0.0.1',
+#        'PORT': '8000',
+#    }
+# }
+
+EXAMPLE_DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
