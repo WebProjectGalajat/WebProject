@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'WebProjectSpotify.wsgi.application'
 #    }
 # }
 
-EXAMPLE_DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
