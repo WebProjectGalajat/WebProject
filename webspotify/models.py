@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Users(models.Model):
+class User(models.Model):
     user_id = models.CharField(max_length=22)
     username = models.CharField(max_length=50)
 
@@ -10,7 +10,7 @@ class Users(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
 
-class Favourite_Artists(models.Model):
+class Favourite_Artist(models.Model):
     user_id = models.CharField(max_length=22)
     artist_id = models.CharField(max_length=22)
     term = models.CharField(max_length=50)
@@ -20,7 +20,7 @@ class Favourite_Artists(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
 
-class Favourite_Genres(models.Model):
+class Favourite_Genre(models.Model):
     user_id = models.CharField(max_length=22)
     genre_name = models.CharField(max_length=50)
     term = models.CharField(max_length=50)
@@ -30,7 +30,7 @@ class Favourite_Genres(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
 
-class Favourite_Songs (models.Model):
+class Favourite_Song(models.Model):
     user_id = models.CharField(max_length=22)
     song_id = models.CharField(max_length=22)
     term = models.CharField(max_length=50)
