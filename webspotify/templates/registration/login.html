@@ -1,0 +1,15 @@
+<!--webspotify/templates/registration/login.html-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Login page</h2>
+
+<form method='post'>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Login">
+</form>
+
+<a href="/">Back to dashboard</a>
+{% endblock %}
