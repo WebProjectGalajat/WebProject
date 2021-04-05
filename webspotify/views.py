@@ -13,3 +13,8 @@ def main_url(req):
 # req -> HttpRequest
 def shop_url(req):
 	return HttpResponse("<h1>Shop Galajat</h1><h2>Hmmm</h2>")
+
+
+# req -> HttpRequest
+def dashboard_url(req):
+	return render(req, 'webspotify/dashboard.html')
