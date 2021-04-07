@@ -19,3 +19,8 @@
 - *git add -A*
 - *git commit -m "missatge commit"*
 - *git push heroku* per pujar els fitxers a Heroku, que farà un deploy automàtic
+
+
+## Traduccio part del document:
+
+Within the WebProjectSpotify directory we find the asgi.py file which is a file that defines our application path. The following file, called settings.py, is the central configuration of all Django-type projects, which has been modified to effectively run the Django application, provide end-users with a streamlined experience, and keep potential attackers under control. The urls.py file is used to update urls throughout the project. Finally we find the file wsgi.py which is the main deployment platform of Django, is the Python standard for servers and web applications.
