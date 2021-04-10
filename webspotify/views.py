@@ -6,6 +6,7 @@ from django.contrib.auth import login
 from .models import *
 from .forms import CustomUserCreationForm
 
+
 # req -> HttpRequest
 def main_url(req):
 	if req.user.is_authenticated:
@@ -40,3 +41,8 @@ def register_url(req):
 			user = form.save()
 			login(req, user)
 			return HttpResponseRedirect("/dashboard/")
+		print(form.errors)
+		return render(
+			req, "registration/register.html",
+			{"form": CustomUserCreationForm}
+		)
