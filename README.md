@@ -19,3 +19,5 @@
 - *git add -A*
 - *git commit -m "missatge commit"*
 - *git push heroku* per pujar els fitxers a Heroku, que farà un deploy automàtic
+
+:)
