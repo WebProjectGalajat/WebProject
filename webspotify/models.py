@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class User(models.Model):
+class Sp_User(models.Model):
     spotify_username = models.CharField(max_length=50, default="none")
     django_username = models.CharField(max_length=50, default="user")
 

@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import login
+from WebProjectSpotify.settings import SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET
+import spotipy
+from spotipy.oauth2 import SpotifyOAuth
 # Create your views here.
 
 from .models import *
 from .forms import CustomUserCreationForm
 
+sp = None
 
 # req -> HttpRequest
 def main_url(req):
@@ -23,7 +27,13 @@ def shop_url(req):
 def dashboard_url(req):
 	if not req.user.is_authenticated:
 		return HttpResponseRedirect("/")
-	return render(req, 'webspotify/dashboard.html')
+	print(req.user)
+	dict = {}
+	for user in Sp_User.objects.order_by('django_username'):
+		if user.django_username == req.user.username:
+			dict['username'] = user.django_username
+			dict['spotify_user'] = user.spotify_username
+	return render(req, 'webspotify/dashboard.html', dict)
 
 
 # req -> HttpRequest
@@ -46,3 +56,13 @@ def register_url(req):
 			req, "registration/register.html",
 			{"form": CustomUserCreationForm}
 		)
+
+
+def spotify_login(req):
+	global sp
+	scope = 'playlist-modify-private,playlist-modify-public,user-top-read'
+	sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope,
+	                                               client_id=SPOTIFY_CLIENT_ID,
+	                                               client_secret=SPOTIFY_CLIENT_SECRET,
+	                                               redirect_uri='localhost:8888'))
+	user = sp.current_user()

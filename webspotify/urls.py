@@ -8,5 +8,6 @@ urlpatterns = [
 	path('accounts/', include("django.contrib.auth.urls")),
 	path('shop/', views.shop_url),
 	path('dashboard/', views.dashboard_url, name="dashboard"),
-	path('register/', views.register_url, name="register")
+	path('register/', views.register_url, name="register"),
+	path('spotify/', views.spotify_login, name="spotify")
 ]
