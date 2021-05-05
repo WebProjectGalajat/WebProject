@@ -12,7 +12,10 @@ Hello, {{ user.username|default:'guest' }}!
     <p>
     Not logged in!
     </p>
-    <a href="{% url 'spotify' %}">Spotify Login</a>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="spotify_login">Login with Spotify</button>
+    </form>
 {% endif %}
 
 <div>
