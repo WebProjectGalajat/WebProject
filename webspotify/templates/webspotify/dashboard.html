@@ -14,7 +14,6 @@ Hello, {{ user.username|default:'guest' }}!
     </p>
     <form method="post">
         {% csrf_token %}
-        <button type="submit" name="spotify_login">Login with Spotify</button>
     </form>
 {% endif %}
 

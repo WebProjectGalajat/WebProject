@@ -11,7 +11,7 @@ class Sp_User(models.Model):
 
 
 class Favourite_Artist(models.Model):
-	spotify_username = models.ForeignKey(Sp_User, max_length=50, default="none", on_delete=models.CASCADE)
+	spotify_username = models.ForeignKey(Sp_User, max_length=50, default="admin", on_delete=models.CASCADE)
 	artist_id = models.CharField(max_length=22)
 	term = models.CharField(max_length=50)
 	position = models.CharField(max_length=50)
@@ -21,7 +21,7 @@ class Favourite_Artist(models.Model):
 
 
 class Favourite_Genre(models.Model):
-	spotify_username = models.ForeignKey(Sp_User, max_length=50, default="none", on_delete=models.CASCADE)
+	spotify_username = models.ForeignKey(Sp_User, max_length=50, default="admin", on_delete=models.CASCADE)
 	genre_name = models.CharField(max_length=50)
 	term = models.CharField(max_length=50)
 	position = models.CharField(max_length=50)
@@ -31,7 +31,7 @@ class Favourite_Genre(models.Model):
 
 
 class Favourite_Song(models.Model):
-	spotify_username = models.ForeignKey(Sp_User, max_length=50, default="none", on_delete=models.CASCADE)
+	spotify_username = models.ForeignKey(Sp_User, max_length=50, default="admin", on_delete=models.CASCADE)
 	song_id = models.CharField(max_length=22)
 	term = models.CharField(max_length=50)
 	position = models.CharField(max_length=50)
