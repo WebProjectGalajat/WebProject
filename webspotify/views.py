@@ -62,15 +62,3 @@ def register_url(req):
 			{"form": CustomUserCreationForm}
 		)
 
-
-def spotify_login():
-	sp = spotipy.Spotify(auth=auth)
-	print("[SPOTIFY] sp created")
-	sp2 = spotipy.Spotify(
-		auth=SpotifyClientCredentials(client_id=SPOTIFY_CLIENT_ID, client_secret=SPOTIFY_CLIENT_SECRET))
-	print("[SPOTIFY] sp2 created")
-	track = sp.track('4q3fCKgrb9nqTDbEcTFv2H')
-	print("[TRACK_INFO]", track.name)
-	# sp.current_user()
-	print("[SPOTIFY] current user")
-
