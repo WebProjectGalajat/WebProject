@@ -33,6 +33,9 @@ def dashboard_url(req):
 		return HttpResponseRedirect("/")
 	return render(req, 'webspotify/dashboard.html')
 
+def song_detail(req):
+	return render(req, 'webspotify/song_detail.html')
+
 
 # req -> HttpRequest
 def register_url(req):
