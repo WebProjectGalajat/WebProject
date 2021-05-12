@@ -13,4 +13,4 @@ Feature: Modificar artista
     Then I'm viewing the modified artists
         | name      |
         | modified  |
-    #c
+    #co
