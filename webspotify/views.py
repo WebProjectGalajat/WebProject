@@ -31,14 +31,7 @@ def shop_url(req):
 def dashboard_url(req):
 	if not req.user.is_authenticated:
 		return HttpResponseRedirect("/")
-	if req.method == "POST" and 'spotify_login' in req.POST:
-		spotify_login()
-	dict = {}
-	for user in Sp_User.objects.order_by('django_username'):
-		if user.django_username == req.user.username:
-			dict['username'] = user.django_username
-			dict['spotify_user'] = user.spotify_username
-	return render(req, 'webspotify/dashboard.html', dict)
+	return render(req, 'webspotify/dashboard.html')
 
 
 # req -> HttpRequest
