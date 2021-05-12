@@ -1,4 +1,3 @@
-# Created by mcr99 at 12/05/2021
 Feature: Modificar artista
   Given a particular artist,
   As a user,
