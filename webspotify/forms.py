@@ -11,4 +11,10 @@ class CustomUserCreationForm(UserCreationForm):
 class SongForm(ModelForm):
 	class Meta:
 		model = Favourite_Song
-		exclude = ('user', )
+		exclude = ('user',)
+
+
+class SongEditForm(ModelForm):
+	class Meta:
+		model = Favourite_Song
+		exclude = ('user', 'name', 'artist_name')

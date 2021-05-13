@@ -1,70 +1,10 @@
-1620810719647	geckodriver	INFO	Listening on 127.0.0.1:38895
-1620810719656	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilerzY1Xg"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
+1620847035845	geckodriver	INFO	Listening on 127.0.0.1:55315
+1620847035849	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileptpF2I"
+XPCOMGlueLoad error for file /usr/lib/firefox/libmozgtk.so:
 /lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
 Couldn't load XPCOM.
-1620810719798	geckodriver	INFO	Listening on 127.0.0.1:44883
-1620810719808	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileiu7eKr"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620810719916	geckodriver	INFO	Listening on 127.0.0.1:43545
-1620810719930	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileE4iIrH"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620810765207	geckodriver	INFO	Listening on 127.0.0.1:34117
-1620810766224	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFQ1zlQ"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620810766349	geckodriver	INFO	Listening on 127.0.0.1:47677
-1620810767364	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileaDxGaY"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620810767482	geckodriver	INFO	Listening on 127.0.0.1:54131
-1620810767501	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilelbVu6P"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620810834109	geckodriver	INFO	Listening on 127.0.0.1:47765
-1620810834143	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilebtpeEY"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620810834262	geckodriver	INFO	Listening on 127.0.0.1:57981
-1620810834308	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKqjIME"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620810834428	geckodriver	INFO	Listening on 127.0.0.1:53557
-1620810835445	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileapb4wQ"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620812009193	geckodriver	INFO	Listening on 127.0.0.1:52005
-1620812009197	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--no-sandbox" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJr5fCG"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620831885221	geckodriver	INFO	Listening on 127.0.0.1:42353
-1620831885761	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--no-sandbox" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilempoVtc"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620832000767	geckodriver	INFO	Listening on 127.0.0.1:57421
-1620832000865	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilenrI3Xq"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620832561090	geckodriver	INFO	Listening on 127.0.0.1:36201
-1620832561095	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-sandbox" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileCmeAsn"
-XPCOMGlueLoad error for file /usr/lib/firefox-esr/libmozgtk.so:
-/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
-Couldn't load XPCOM.
-1620835561724	geckodriver	INFO	Listening on 127.0.0.1:53699
-1620835562897	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQp35ws"
+1620847330293	geckodriver	INFO	Listening on 127.0.0.1:35725
+1620847330299	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileaRggPM"
 XPCOMGlueLoad error for file /usr/lib/firefox/libmozgtk.so:
 /lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
 Couldn't load XPCOM.

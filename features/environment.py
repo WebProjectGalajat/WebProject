@@ -1,12 +1,14 @@
-from selenium.webdriver import Firefox
+from splinter.browser import Browser
+from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
 
 def before_all(context):
-	opts = Options()
-	opts.add_argument('--no-sandbox')
-	opts.add_argument('--headless')
-	context.browser = Firefox(options=opts)
+	options = Options()
+	# chrome_options.add_argument('--disable-dev-shm-usage')
+	# chrome_options.add_argument('--no-sandbox')
+	options.headless = True
+	context.browser = webdriver.Firefox(options=options)
 	pass
 
 

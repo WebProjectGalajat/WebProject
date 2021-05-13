@@ -2,18 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import login
 from WebProjectSpotify.settings import SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET
-import spotipy
-from spotipy.oauth2 import SpotifyOAuth, SpotifyClientCredentials
 # Create your views here.
 
 from .models import *
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm, SongForm, SongEditForm
 
 scope = 'playlist-modify-private,playlist-modify-public,user-top-read'
-
-auth = SpotifyOAuth(client_id=SPOTIFY_CLIENT_ID, client_secret=SPOTIFY_CLIENT_SECRET,
-                    redirect_uri="http://localhost:8888", scope=scope)
-
 
 # req -> HttpRequest
 def main_url(req):
@@ -32,9 +26,6 @@ def dashboard_url(req):
 	if not req.user.is_authenticated:
 		return HttpResponseRedirect("/")
 	return render(req, 'webspotify/dashboard.html')
-
-def song_detail(req):
-	return render(req, 'webspotify/song_detail.html')
 
 
 # req -> HttpRequest
@@ -57,4 +48,3 @@ def register_url(req):
 			req, "registration/register.html",
 			{"form": CustomUserCreationForm}
 		)
-

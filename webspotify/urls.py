@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic.detail import DetailView
 from webspotify.models import Favourite_Song
-from webspotify.forms import SongForm
+from webspotify.forms import SongForm, SongEditForm
 
 from . import views
 
@@ -22,4 +22,9 @@ urlpatterns = [
 	     DetailView.as_view(model=Favourite_Song,
 	                        template_name='webspotify/song_detail.html'),
 	     name="song_detail"),
+	path('songs/<int:pk>/modify/',
+	     UpdateView.as_view(model=Favourite_Song,
+	                        template_name='webspotify/song_modify.html',
+	                        form_class=SongEditForm),
+	     name="modify_song"),
 ]
