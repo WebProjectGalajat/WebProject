@@ -45,10 +45,18 @@ def register_url(req):
 			{"form": CustomUserCreationForm}
 		)
 
+def song_list(req):
+	all_songs = Favourite_Song.objects.order_by('user')
+	dic = {'songs': []}
+	for song in all_songs:
+		if song.user == req.user:
+			dic['songs'].append(song)
+	return render(req, 'webspotify/songs/songs_list.html', dic)
+
 
 class CreateSong(CreateView):
 	model = Favourite_Song
-	template_name = "webspotify/add_song.html"
+	template_name = "webspotify/songs/add_song.html"
 	form_class = SongForm
 
 	def form_valid(self, form):

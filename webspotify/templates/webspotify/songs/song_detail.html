@@ -13,4 +13,5 @@
 <p>
     {{ favourite_song.description }}
 </p>
+<a href="{% url 'modify_song' favourite_song.id %}">Edit song</a>
 {% endblock %}

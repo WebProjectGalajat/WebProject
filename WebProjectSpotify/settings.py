@@ -27,7 +27,7 @@ SPOTIFY_CLIENT_ID = '5b6b5a559d3045bab93bfe19427f936c'
 SPOTIFY_CLIENT_SECRET = '3785720537e742da876f7fe6e7217afe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'web-project-galajat-2021.herokuapp.com']
 
