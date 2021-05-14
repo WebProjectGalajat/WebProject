@@ -10,8 +10,7 @@ from . import views
 
 urlpatterns = [
 	path('', views.main_url, name="index"),
-	path('accounts/login/', django_views.LoginView.as_view(), name="login"),
-	path('accounts/logout/', django_views.LogoutView.as_view(), name="logout"),
+	path('accounts/', include('django.contrib.auth.urls')),
 	path('dashboard/', views.dashboard_url, name="dashboard"),
 	path('register/', views.register_url, name="register"),
 	path('songs/add/', views.CreateSong.as_view(), name="add_song"),
