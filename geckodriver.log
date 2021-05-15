@@ -1,0 +1,10 @@
+1620847035845	geckodriver	INFO	Listening on 127.0.0.1:55315
+1620847035849	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileptpF2I"
+XPCOMGlueLoad error for file /usr/lib/firefox/libmozgtk.so:
+/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
+Couldn't load XPCOM.
+1620847330293	geckodriver	INFO	Listening on 127.0.0.1:35725
+1620847330299	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileaRggPM"
+XPCOMGlueLoad error for file /usr/lib/firefox/libmozgtk.so:
+/lib/x86_64-linux-gnu/libpango-1.0.so.0: undefined symbol: g_ptr_array_copy
+Couldn't load XPCOM.

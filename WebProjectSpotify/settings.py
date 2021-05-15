@@ -23,6 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'u1*=yy4&ih_wej98c0j^2=&or+s@i9z0_txpebgka*_kg+iyq('
 
+SPOTIFY_CLIENT_ID = '5b6b5a559d3045bab93bfe19427f936c'
+SPOTIFY_CLIENT_SECRET = '3785720537e742da876f7fe6e7217afe'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
