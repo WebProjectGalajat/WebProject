@@ -1,0 +1,22 @@
+from django.shortcuts import render
+from django.views.generic.edit import CreateView
+from webspotify.models import Favourite_Genre
+from .forms import GenreForm
+
+def genre_list(req):
+	all_songs = Favourite_Genre.objects.order_by('user')
+	dic = {'genres': []}
+	for song in all_songs:
+		if song.user == req.user:
+			dic['genres'].append(song)
+	return render(req, 'webspotify/genres/genres_list.html', dic)
+
+
+class CreateGenre(CreateView):
+	model = Favourite_Genre
+	template_name = "webspotify/genres/add_genre.html"
+	form_class = GenreForm
+
+	def form_valid(self, form):
+		form.instance.user = self.request.user
+		return super(CreateGenre, self).form_valid(form)

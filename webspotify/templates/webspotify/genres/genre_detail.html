@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>
+    {{ favourite_genre.name }}
+</h1>
+<h5>
+    {{ favourite_genre.rating }}
+</h5>
+<p>
+    {{ favourite_genre.description }}
+</p>
+<a href="{% url 'modify_genre' favourite_genre.id %}">Edit genre</a>
+{% endblock %}

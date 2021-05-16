@@ -1,11 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.contrib.auth import login
 # Create your views here.
 
 from .forms import CustomUserCreationForm
-
-scope = 'playlist-modify-private,playlist-modify-public,user-top-read'
 
 
 # req -> HttpRequest

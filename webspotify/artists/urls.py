@@ -8,7 +8,7 @@ from . import views
 urlpatterns = [
 	path('', views.artist_list, name="artists_list"),
 	path('add/', views.CreateArtist.as_view(), name="add_artist"),
-	path('<int:pk>',
+	path('<int:pk>/',
 	     DetailView.as_view(model=Favourite_Artist,
 	                        template_name='webspotify/artists/artist_detail.html'),
 	     name="artist_detail"),
