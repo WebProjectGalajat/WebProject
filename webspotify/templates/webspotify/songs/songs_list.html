@@ -5,4 +5,5 @@
 {% for son in songs %}
 <li><b>{{ son.name }}</b> - {{ son.artist_name }} <i>Rating: {{ son.rating }} </i></li>
 {% endfor %}
+<a href="{% url 'add_song' %}">Add a song</a>
 {% endblock %}

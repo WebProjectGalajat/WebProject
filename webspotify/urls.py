@@ -9,4 +9,5 @@ urlpatterns = [
 	path('dashboard/', views.dashboard_url, name="dashboard"),
 	path('register/', views.register_url, name="register"),
 	path('songs/', include('webspotify.songs.urls')),
+	path('artists/', include('webspotify.artists.urls')),
 ]
