@@ -11,4 +11,5 @@
     {{ favourite_genre.description }}
 </p>
 <a href="{% url 'modify_genre' favourite_genre.id %}">Edit genre</a>
+<a href="{% url 'genres_list' %}">Back to the list</a>
 {% endblock %}

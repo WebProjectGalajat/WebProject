@@ -16,5 +16,6 @@ urlpatterns = [
 	     UpdateView.as_view(model=Favourite_Artist,
 	                        template_name='webspotify/artists/artist_modify.html',
 	                        form_class=ArtistEditForm),
-	     name="modify_artist")
+	     name="modify_artist"),
+	path('database_search/', views.database_search, name="database_search_artist")
 ]

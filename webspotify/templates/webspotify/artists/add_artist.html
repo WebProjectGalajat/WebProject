@@ -6,8 +6,9 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
     $(function() {
-        $("#prov").autocomplete({
-            source: ['cat', 'caa', 'caaaa'],
+        $("#id_name").autocomplete({
+            source: "{% url 'database_search_artist' %}",
+            minLength: 2,
         });
     });
 </script>
@@ -17,10 +18,8 @@
 <form method="post" enctype="multipart/form-data" action="">
     {% csrf_token %}
     {{ form.as_table }}
-    <div>
-    <label for="prov">Prova: </label>
-    <input id="prov">
-    </div>
     <input type="submit" value="Submit"/>
 </form>
 {% endblock %}
+
+<a href="{% url 'artists_list' %}">Back to the list</a>

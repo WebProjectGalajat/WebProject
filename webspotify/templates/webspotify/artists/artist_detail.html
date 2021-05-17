@@ -11,4 +11,5 @@
     {{ favourite_artist.description }}
 </p>
 <a href="{% url 'modify_artist' favourite_artist.id %}">Edit artist</a>
+<a href="{% url 'artists_list' %}">Back to the list</a>
 {% endblock %}
