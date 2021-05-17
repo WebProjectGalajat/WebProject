@@ -1,8 +1,10 @@
+from behave import *
+
 @when(u'I list artists')
 def step_impl(context):
-	raise NotImplementedError(u'STEP: When I list artists')
+	context.browser.visit(context.get_url('')) #Falta ficar la URL
 
 
 @then(u'the list contains 20 artists')
 def step_impl(context):
-	raise NotImplementedError(u'STEP: Then the list contains 20 artists')
+	raise NotImplementedError("ERROR")
