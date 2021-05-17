@@ -1,9 +1,26 @@
 {% extends "base.html" %}
 
+{% block head %}
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function() {
+        $("#prov").autocomplete({
+            source: ['cat', 'caa', 'caaaa'],
+        });
+    });
+</script>
+{% endblock %}
+
 {% block content %}
 <form method="post" enctype="multipart/form-data" action="">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form.as_table }}
+    <div>
+    <label for="prov">Prova: </label>
+    <input id="prov">
+    </div>
     <input type="submit" value="Submit"/>
 </form>
 {% endblock %}
