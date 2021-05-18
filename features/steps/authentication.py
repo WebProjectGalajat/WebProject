@@ -1,4 +1,5 @@
 from behave import *
+from selenium.webdriver import ActionChains
 
 use_step_matcher("parse")
 
@@ -13,8 +14,11 @@ def step_impl(context, user, password):
 
 @given(u'I login as user "{user}" with password "{password}"')
 def step_impl(context, user, password):
-	context.browser.visit(context.get_url('/accounts/login/'))
+	context.browser.get(context.get_url('/accounts/login/'))
 	form = context.browser.find_elements_by_tag_name('form')[0]
-	context.browser.fill('username', user)
-	context.browser.fill('password', password)
-	form.find_elements_by_value('login')[0].click()
+	user_box = form.find_element_by_id('id_username')
+	user_box.send_keys(user)
+	password_box = form.find_element_by_id('id_password')
+	password_box.send_keys(password)
+	login_button = form.find_elements_by_tag_name('input')[-1]
+	ActionChains(context.browser).click(login_button).perform()
