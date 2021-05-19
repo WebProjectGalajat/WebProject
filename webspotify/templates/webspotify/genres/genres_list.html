@@ -3,7 +3,7 @@
 {% block content %}
 <h1>List of songs by user {{ user.username }} </h1>
 {% for gen in genres %}
-<li><b>{{ gen.name }}</b> - <i>Rating: {{ gen.rating }} </i></li>
+<li><a href="{% url 'genre_detail' gen.id %}"><b>{{ gen.name }}</b></a> - <i>Rating: {{ gen.rating }} </i></li>
 {% endfor %}
 <a href="{% url 'add_genre' %}">Add a genre</a>
 {% endblock %}

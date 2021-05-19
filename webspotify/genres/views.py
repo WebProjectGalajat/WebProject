@@ -1,4 +1,4 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.views.generic.edit import CreateView
 from webspotify.models import Favourite_Genre
@@ -13,6 +13,9 @@ def genre_list(req):
 			dic['genres'].append(song)
 	return render(req, 'webspotify/genres/genres_list.html', dic)
 
+def delete_genre(req, pk):
+	Favourite_Genre.objects.filter(id=pk).delete()
+	return HttpResponseRedirect("/genres/")
 
 def genres_from_file(req):
 	if 'term' in req.GET:

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView
 from webspotify.models import Favourite_Song
 from .forms import SongForm
+from django.http import HttpResponseRedirect
 
 def song_list(req):
 	all_songs = Favourite_Song.objects.order_by('user')
@@ -11,6 +12,9 @@ def song_list(req):
 			dic['songs'].append(song)
 	return render(req, 'webspotify/songs/songs_list.html', dic)
 
+def delete_song(req, pk):
+	Favourite_Song.objects.filter(id=pk).delete()
+	return HttpResponseRedirect("/songs/")
 
 class CreateSong(CreateView):
 	model = Favourite_Song
