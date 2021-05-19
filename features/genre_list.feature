@@ -9,4 +9,4 @@ Feature: Llista de gèneres
     Scenario: List all genres
         Given I login as user "user" with password "password"
         When I list genres
-        Then I'm viewing a list containing genres
+        Then I'm viewing a list containing my genres

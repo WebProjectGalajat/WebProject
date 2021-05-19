@@ -9,6 +9,6 @@ Feature: Afegir genere
     Scenario: Add a genre
         Given I login as user "user" with password "password"
         When I type a genre "genre"
-        Then I'm viewing a list containing 1 genre
+        Then I'm viewing details containing 1 genre
             | name         |
             | UK Drill     |

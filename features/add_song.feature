@@ -8,7 +8,7 @@ Feature: Afegir cançó
 
     Scenario: Add a song
         Given I login as user "user" with password "password"
-        When I type a song that is correct
-        Then I'm viewing a list containing 1 song
+        When I type a song "song"
+        Then I'm viewing details containing 1 song
             | name              |
             | Hotline Bling     |

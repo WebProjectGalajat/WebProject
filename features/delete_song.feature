@@ -8,5 +8,5 @@ Feature: Afegir cançó
 
     Scenario: Delete a song
         Given I login as user "user" with password "password"
-        When I type a song that is correct
+        When I delete a song
         Then I'm viewing a list containing 0 songs

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>List of artists by user {{ user.username }} </h1>
+<h1>List of artists by {{ user.username }} </h1>
 {% for art in artists %}
 <li><a href="{% url 'artist_detail' art.id %}"><b>{{ art.name }}</b></a> - <i>Rating: {{ art.rating }} </i></li>
 {% endfor %}

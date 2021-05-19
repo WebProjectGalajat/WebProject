@@ -21,4 +21,5 @@ def step_impl(context, user, password):
 	password_box = form.find_element_by_id('id_password')
 	password_box.send_keys(password)
 	login_button = form.find_elements_by_tag_name('input')[-1]
-	ActionChains(context.browser).click(login_button).perform()
+	login_button.click()
+	assert context.browser.current_url.rstrip("/").split("/")[-1] == "dashboard"
