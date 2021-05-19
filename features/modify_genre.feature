@@ -8,7 +8,7 @@ I want to modify it
 
   Scenario: Modify genre
     Given I login as user "user" with password "password"
-    When I modify genre
-    Then I'm viewing the modified genres
+    When I modify genre "genre"
+    Then I'm viewing the modified genre "genre"
       | Old genre version      |
       | Modified genre version |

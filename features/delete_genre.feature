@@ -8,7 +8,5 @@ Feature: Eliminar genere
 
     Scenario: Delete a genre
         Given I login as user "user" with password "password"
-        When I type a genre
-        Then I'm viewing a list containing
-            | name         |
-        And the list contains 0 genres
+        When I gelete a genre
+        Then I'm viewing a list containing 0 genres

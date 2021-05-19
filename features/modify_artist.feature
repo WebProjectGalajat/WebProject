@@ -8,7 +8,7 @@ I want to modify it
 
   Scenario: Modify an artist
     Given I login as user "user" with password "password"
-    When I modify artist
-    Then I'm viewing the modified artists
+    When I modify artist "artist"
+    Then I'm viewing the modified artist "artist"
       | Old artist      |
       | Modified artist |

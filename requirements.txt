@@ -1,5 +1,5 @@
 Django
 django-heroku
 gunicorn
-spotipy
+requests
 behave-django

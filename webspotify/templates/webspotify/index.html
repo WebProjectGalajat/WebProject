@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 {% block header  %}
+<center>
 <h1>Pagina Web Galajat</h1>
+</center>
 {% endblock %}
 {% block content %}
+<center>
 Hello, {{ user.username|default:'guest' }}!
 
 <div>
     <p><a href="accounts/login/">Login</a></p>
     <a href="{% url 'register' %}">Register</a>
 </div>
+</center>
 {% endblock %}

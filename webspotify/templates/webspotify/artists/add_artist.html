@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script>
+    $(function() {
+        $("#id_name").autocomplete({
+            source: "{% url 'database_search_artist' %}",
+            minLength: 2,
+        });
+    });
+</script>
+{% endblock %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Submit"/>
+</form>
+{% endblock %}
+
+<a href="{% url 'artists_list' %}">Back to the list</a>

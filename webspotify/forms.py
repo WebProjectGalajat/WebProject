@@ -7,14 +7,3 @@ class CustomUserCreationForm(UserCreationForm):
 	class Meta(UserCreationForm.Meta):
 		fields = UserCreationForm.Meta.fields + ("email", "first_name", "last_name")
 
-
-class SongForm(ModelForm):
-	class Meta:
-		model = Favourite_Song
-		exclude = ('user',)
-
-
-class SongEditForm(ModelForm):
-	class Meta:
-		model = Favourite_Song
-		exclude = ('user', 'name', 'artist_name')

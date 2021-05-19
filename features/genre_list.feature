@@ -6,9 +6,7 @@ Feature: Llista de gèneres
     Background: There is a registered user
         Given Exists a user "user" with password "password"
 
-    Scenario: List all artists
+    Scenario: List all genres
         Given I login as user "user" with password "password"
-        When I list artists
-        Then I'm viewing a list containing
-            | name      |
-        And the list contains 20 artists
+        When I list genres
+        Then I'm viewing a list containing genres

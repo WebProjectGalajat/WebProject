@@ -3,26 +3,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<center>
 Hello, {{ user.username|default:'guest' }}!
 
 <p>
-{% if spotify_user %}
-    Logged in Spotify as {{ spotify_user }}!
-{% else %}
-    <p>
-    Not logged in!
-    </p>
-    <form method="post">
-        {% csrf_token %}
-    </form>
-{% endif %}
-
-<p>
-    <p><a href="{% url 'songs_list' %}">See your songs</a></p>
-    <a href="{% url 'add_song' %}">Add a song</a>
-    <p><a href="{% url 'password_change' %}">Change your password</a></p>
-    <a href="{% url 'logout' %}">Logout</a>
+<p><a href="{% url 'songs_list' %}">See your songs</a></p>
+<p><a href="{% url 'artists_list' %}">See your artists</a></p>
+<p><a href="{% url 'genres_list' %}">See your genres</a></p>
+<p><a href="{% url 'password_change' %}">Change your password</a></p>
+<a href="{% url 'logout' %}">Logout</a>
 </div>
+</center>
 {% endblock %}
 
 

@@ -1,5 +1,22 @@
 {% extends "base.html" %}
 
+{% block head %}
+<script>
+    $(function() {
+        $("#id_genre").autocomplete({
+            source: "{% url 'genres_from_file' %}",
+            minLength: 2,
+        });
+    });
+    $(function() {
+        $("#id_artist_name").autocomplete({
+            source: "{% url 'get_saved_artists' %}",
+            minLength: 0,
+        });
+    });
+</script>
+{% endblock %}
+
 {% block content %}
 <form method="post" enctype="multipart/form-data" action="">
     {% csrf_token %}
@@ -7,3 +24,5 @@
     <input type="submit" value="Submit"/>
 </form>
 {% endblock %}
+
+<a href="{% url 'songs_list' %}">Back to the list</a>

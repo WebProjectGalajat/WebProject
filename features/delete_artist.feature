@@ -8,12 +8,5 @@ Feature: Eliminar artista
 
     Scenario: The artist exists
         Given I login as user "user" with password "password"
-        When I type an artist
-        Then I'm viewing a list containing
-            | name      |
-        And the list contains 0 artists
-
-    Scenario: Delete artist not on the list
-        Given I login as user "user" with password "password"
-        When I type an artist that doesn't exist
-        Then I get an error saying it doesn't exist
+        When I delete an artist
+        Then I'm viewing a list containing 0 artists
