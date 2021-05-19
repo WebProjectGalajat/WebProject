@@ -8,8 +8,7 @@ Feature: Afegir genere
 
     Scenario: Add a genre
         Given I login as user "user" with password "password"
-        When I type a genre
-        Then I'm viewing a list containing
+        When I type a genre "genre"
+        Then I'm viewing a list containing 1 genre
             | name         |
             | UK Drill     |
-        And the list contains 1 genre
