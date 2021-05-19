@@ -9,11 +9,4 @@ Feature: Afegir cançó
     Scenario: Delete a song
         Given I login as user "user" with password "password"
         When I type a song that is correct
-        Then I'm viewing a list containing
-            | name              |
-        And the list contains 0 songs
-
-    Scenario: Delete a song not on the list
-        Given I login as user "user" with password "password"
-        When I type a song that does not exist
-        Then I get an error saying it doesn't exist
+        Then I'm viewing a list containing 0 songs

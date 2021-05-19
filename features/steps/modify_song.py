@@ -1,8 +1,8 @@
-@when(u'I modify a song description')
+@when(u'I modify song "{song}"')
 def stem_impl(context):
     raise NotImplementedError(u'STEP: When I modify a song description')
 
 
-@when(u'I modify song rating')
+@then(u'I\'m viewing the modified song "{song}"')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When I modify a song rating')
+    raise NotImplementedError(u'STEP: Then I\'m viewing the modified song')

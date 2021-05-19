@@ -9,6 +9,4 @@ Feature: Llista de cançons
     Scenario: List all songs
         Given I login as user "user" with password "password"
         When I list songs
-        Then I'm viewing a list containing
-            | name      |
-        And the list contains 30 songs
+        Then I'm viewing a list containing 30 songs
