@@ -46,7 +46,20 @@ d'objecte a borrar, ja que la url que crida a views té el tipus d'objecte a bor
 ### Tests
 Aaa nose
 ### Ús d'una API
-U redactare mes
-Artista: Fa autocomplete amb els artistes que busca a la API de Musicbrainz
-Genere: Fa autocomplete amb els generes que te a un fitxer
-Cançó: Fa autocomplete dels generes i dels artistes (primer pose els k te a la bbdd sino fa request a la api)
+La nostra web utilitza la llibreria jQuery per a poder oferir a l'usuari la funció d'autocomplete en certs camps al crear
+un objecte a la web. La funció pot prendre com a paràmetre source, és a dir, d'on treurà els registres que oferirà a l'usuari 
+quan aquest escrigui, 3 tipus diferents de valors; una llista de JavaScript, un String o una funció. La llista de JavaScript 
+no ens permet la flexibilitat que necessitem i la funció és massa avançada pels nostres nivells de JavaScript. Per això hem 
+utilitzat l'String. Aquest String ha de ser una url, de manera que si la url és http://www.exemple.com, aquest domini ha de
+respondre una resposta JSON amb els resultats a mostrar quan s'hi accedeix fent http://www.exemple.com?term=busqueda. Si 
+a source li passem una url de la nostra web, i definim una view que obtingui les dades i les retorni amb una JsonResponse,
+podem realitzar la request a la API de forma molt més senzilla.
+Quan l'usuari vol crear un artista, el camp name realitza l'autocomplete, realitzant una búsqueda a una API gratuïta amb 
+dades musicals anomenada MusicBrainz. Aquest autocomplete no funciona gaire bé, ja que MusicBrainz sol té un mètode per buscar 
+i no per buscar per l'inici. Llavors si l'usuari escriu "Que" esperant a que surti "Queen", abans li sortiran grups amb noms 
+com Que, [.que], o Gee-Que, ja que s'assemblen més al terme de búsqueda.  
+Quan l'usuari vol crear un gènere, el camp name realitza l'autocomplete, llegint d'un fitxer amb uns 1800 gèneres 
+musicals diferents.  
+Quan l'usuari vol crear una cançó, es realitza autocomplete a 2 camps; el gènere i el nom de l'artista. El gènere és igual que
+si es crea un gènere, es llegeix del fitxer. El nom de l'artista, en canvi, enlloc de fer una búsqueda a la API de MusicBrainz, 
+dóna prioritat als artistes que ha afegit l'artista, de manera que si l'usuari ha afegit algun artista, li sortirà abans al autocomplete.

@@ -6,6 +6,8 @@ from .forms import GenreForm
 
 
 def genre_list(req):
+	if not req.user.is_authenticated:
+		return HttpResponseRedirect("/")
 	all_songs = Favourite_Genre.objects.order_by('user')
 	dic = {'genres': []}
 	for song in all_songs:
@@ -14,6 +16,8 @@ def genre_list(req):
 	return render(req, 'webspotify/genres/genres_list.html', dic)
 
 def delete_genre(req, pk):
+	if not req.user.is_authenticated:
+		return HttpResponseRedirect("/")
 	Favourite_Genre.objects.filter(id=pk).delete()
 	return HttpResponseRedirect("/genres/")
 
