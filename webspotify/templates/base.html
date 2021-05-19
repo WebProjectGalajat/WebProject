@@ -32,6 +32,9 @@
     {% block sidebar %}
     <ul>
         <li><a href="{% url 'dashboard' %}">Home</a></li>
+        <li><a href="{% url 'songs_list' %}">Songs</a></li>
+        <li><a href="{% url 'artists_list' %}">Artists</a></li>
+        <li><a href="{% url 'genres_list' %}">Genres</a></li>
     </ul>
     {% endblock %}
 </div>

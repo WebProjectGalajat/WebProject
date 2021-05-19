@@ -37,6 +37,7 @@ class Favourite_Song(models.Model):
 	user = models.ForeignKey(User, max_length=50, default=1, on_delete=models.CASCADE)
 	name = models.CharField(max_length=50, default="")
 	artist_name = models.CharField(max_length=50, default="")
+	genre = models.CharField(max_length=50, default="")
 	rating = models.PositiveSmallIntegerField('Rating (stars)', blank=False, default=3, choices=RATING_CHOICES)
 	description = models.TextField(max_length=200, default="")
 
