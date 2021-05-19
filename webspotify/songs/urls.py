@@ -16,5 +16,6 @@ urlpatterns = [
 	     UpdateView.as_view(model=Favourite_Song,
 	                        template_name='webspotify/songs/song_modify.html',
 	                        form_class=SongEditForm),
-	     name="modify_song")
+	     name="modify_song"),
+	path('<int:pk>/delete/', views.delete_song, name="delete_song")
 ]

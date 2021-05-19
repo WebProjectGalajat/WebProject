@@ -3,7 +3,7 @@ from django.views.generic.edit import CreateView
 from webspotify.models import Favourite_Artist
 from .forms import ArtistForm
 import requests as r
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseRedirect
 
 def artist_list(req):
 	all_songs = Favourite_Artist.objects.order_by('user')
@@ -13,6 +13,9 @@ def artist_list(req):
 			dic['artists'].append(song)
 	return render(req, 'webspotify/artists/artists_list.html', dic)
 
+def delete_artist(req, pk):
+	Favourite_Artist.objects.filter(id=pk).delete()
+	return HttpResponseRedirect("/artists/")
 
 def database_search(req):
 	if 'term' in req.GET:

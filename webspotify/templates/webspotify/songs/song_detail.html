@@ -14,5 +14,6 @@
     {{ favourite_song.description }}
 </p>
 <a href="{% url 'modify_song' favourite_song.id %}">Edit song</a>
+<a href="{% url 'delete_song' favourite_song.id %}">Delete song</a>
 <a href="{% url 'songs_list' %}">Back to the list</a>
 {% endblock %}

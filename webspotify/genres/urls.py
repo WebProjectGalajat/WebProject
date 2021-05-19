@@ -17,5 +17,6 @@ urlpatterns = [
 	                        template_name='webspotify/genres/genre_modify.html',
 	                        form_class=GenreEditForm),
 	     name="modify_genre"),
-	path('database_search/', views.genres_from_file, name="genres_from_file")
+	path('database_search/', views.genres_from_file, name="genres_from_file"),
+	path('<int:pk>/delete/', views.delete_genre, name="delete_genre")
 ]
