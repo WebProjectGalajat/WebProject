@@ -1,4 +1,5 @@
 from selenium.webdriver import ActionChains
+from behave import *
 
 @when(u'I type an artist "{artist}"')
 def step_impl(context, artist):
@@ -11,7 +12,6 @@ def step_impl(context, artist):
     description_box.send_keys('Descripcio original')
     submit_button = form.find_elements_by_tag_name('input')[-1]
     ActionChains(context.browser).click(submit_button).perform()
-
 
 
 @then(u'I\'m viewing the artist details containing')
