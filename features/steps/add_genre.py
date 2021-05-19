@@ -1,4 +1,5 @@
 from selenium.webdriver import ActionChains
+from behave import *
 
 
 @when(u'I type a genre "{genre}"')
