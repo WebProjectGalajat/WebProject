@@ -19,6 +19,6 @@ def step_impl(context):
     divs = context.browser.find_elements_by_tag_name('div')
     for div in divs:
         if div.id == "content":
-            title_tag = content.find_element_by_tag_name('h1')
+            title_tag = context.find_element_by_tag_name('h1')
             title = title_tag.text
             assert title == context.artist
