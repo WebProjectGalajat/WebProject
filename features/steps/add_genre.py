@@ -1,6 +1,7 @@
 from selenium.webdriver import ActionChains
 from behave import *
 
+
 @when(u'I type a genre "{genre}"')
 def step_impl(context, genre):
     context.browser.get(context.get_url('/genres/add/'))  # Falta la URL

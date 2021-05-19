@@ -1,6 +1,7 @@
 from selenium.webdriver import ActionChains
 from behave import *
 
+
 @when(u'I type an artist "{artist}"')
 def step_impl(context, artist):
     context.browser.get(context.get_url('/artists/add/'))
