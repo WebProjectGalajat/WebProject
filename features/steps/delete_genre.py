@@ -1,3 +1,6 @@
+from selenium.webdriver.common.keys import Keys
+from behave import *
+
 @when(u'I delete a genre "{genre}"')
 def step_impl(context, genre):
     # From the genre list, enter to delete the song
