@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+<center>
 <form method="post" enctype="multipart/form-data" action="">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Submit"/>
 </form>
 <a href="{% url 'genre_detail' favourite_genre.id %}">Cancel and go back</a>
+</center>
 {% endblock %}

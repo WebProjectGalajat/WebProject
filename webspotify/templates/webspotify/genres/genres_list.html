@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+<center>
 <h1>List of genres by {{ user.username }} </h1>
 {% for gen in genres %}
 <li><a href="{% url 'genre_detail' gen.id %}"><b>{{ gen.name }}</b></a> - <i>Rating: {{ gen.rating }} </i></li>
 {% endfor %}
 <a href="{% url 'add_genre' %}">Add a genre</a>
+</center>
 {% endblock %}

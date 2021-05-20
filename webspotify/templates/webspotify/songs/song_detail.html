@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<center>
 <h1>
     {{ favourite_song.name }}
 </h1>
@@ -19,4 +20,5 @@
 <a href="{% url 'modify_song' favourite_song.id %}">Edit song</a>
 <a href="{% url 'delete_song' favourite_song.id %}">Delete song</a>
 <a href="{% url 'songs_list' %}">Back to the list</a>
+</center>
 {% endblock %}
