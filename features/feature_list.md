@@ -1,13 +1,13 @@
 # Llista de features
 - Llista de cançons FET
 - Afegir cançó FET
-- Modificar cançó
+- Modificar cançó FET
 - Eliminar cançó
 - Llista d'artistes FET
 - Afegir artista FET
-- Modificar artista
+- Modificar artista FET
 - Eliminar artista
 - Llista de generes FET
 - Afegir genere FET
-- Modificar genere
+- Modificar genere FET
 - Eliminar genere
