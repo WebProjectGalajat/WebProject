@@ -27,13 +27,13 @@ def genres_from_file(req):
 		term = req.GET.get('term')
 		results = []
 		for genre in all_genres:
-			if genre.startswith(term) and genre not in results:
+			if genre.startswith(term.lower()) and genre not in results:
 				results.append(genre)
 				if len(results) >= 10:
 					break
 		if len(results) < 10:
 			for genre in all_genres:
-				if term in genre and genre not in results:
+				if term.lower() in genre and genre not in results:
 					results.append(genre)
 					if len(results) >= 10:
 						break
