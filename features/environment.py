@@ -1,4 +1,3 @@
-from splinter.browser import Browser
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 

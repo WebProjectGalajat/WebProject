@@ -9,5 +9,4 @@ Feature: Llista d'artistes
     Scenario: List all artists
         Given I login as user "user" with password "password"
         When I list artists
-        Then I'm viewing a list containing 20 artists
-            | name      |
+        Then I'm viewing a list containing my artists

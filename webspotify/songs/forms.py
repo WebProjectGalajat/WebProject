@@ -11,4 +11,4 @@ class SongForm(ModelForm):
 class SongEditForm(ModelForm):
 	class Meta:
 		model = Favourite_Song
-		exclude = ('user', 'name', 'artist_name')
+		exclude = ('user', 'name', 'artist_name',)
