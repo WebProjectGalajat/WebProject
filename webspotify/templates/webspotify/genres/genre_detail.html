@@ -1,13 +1,22 @@
 {% extends 'base.html' %}
 
+<span vocab="https://schema.org/" typeof="MusicGenre">
 {% block content %}
-<h1>
+<h1 property="name">
     {{ favourite_genre.name }}
 </h1>
-<h5>
-    {{ favourite_genre.rating }}
-</h5>
-<p>
+<span rel="rating">
+    <span typeof="Rating">
+        <span property="worstRating" content="0"></span>
+            <span property="ratingValue">
+                <h5>
+                    {{ favourite_genre.rating }}
+                </h5>
+            </span>
+        <span property="bestRating" content="5"></span>
+    </span>
+</span>
+<p property="description">
     {{ favourite_genre.description }}
 </p>
 <a href="{% url 'modify_genre' favourite_genre.id %}">Edit genre</a>

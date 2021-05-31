@@ -1,16 +1,26 @@
 {% extends 'base.html' %}
 
+<span vocab="https://schema.org/" typeof="MusicGroup">
 {% block content %}
-<h1>
+<h1 property="name">
     {{ favourite_artist.name }}
 </h1>
-<h5>
-    {{ favourite_artist.rating }}
-</h5>
-<p>
+<span rel="rating">
+    <span typeof="Rating">
+        <span property="worstRating" content="0"></span>
+            <span property="ratingValue">
+                <h5>
+                    {{ favourite_artist.rating }}
+                </h5>
+            </span>
+        <span property="bestRating" content="5"></span>
+    </span>
+</span>
+<p property="description">
     {{ favourite_artist.description }}
 </p>
 <a href="{% url 'modify_artist' favourite_artist.id %}">Edit artist</a>
 <a href="{% url 'delete_artist' favourite_artist.id %}">Delete artist</a>
 <a href="{% url 'artists_list' %}">Back to the list</a>
 {% endblock %}
+</span>
