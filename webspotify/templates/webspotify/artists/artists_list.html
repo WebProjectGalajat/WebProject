@@ -1,12 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
+<span vocab="https://schema.org/" typeof="ArtistsList">
 <center>
-<h1>List of artists by {{ user.username }} </h1>
+<h1>List of artists by <span property="user"> {{ user.username }} </span></h1>
+<ul rel="artists">
 {% for art in artists %}
-<li><a href="{% url 'artist_detail' art.id %}"><b>{{ art.name }}</b></a> - <i>Rating: {{ art.rating }} </i></li>
+<li rel="artist" typeof="MusicGroup"><span property="name"><a href="{% url 'artist_detail' art.id %}"><b>{{ art.name }}</b></a></span>
+    -
+<span rel="rating">
+<span typeof="Rating">
+    <span property="worstRating" content="0"></span>
+        <span property="ratingValue">
+            <i>Rating: {{ art.rating }} </i>
+        </span>
+    <span property="bestRating" content="5"></span>
+</span>
+</span>
+</li>
 {% endfor %}
+</ul>
 
 <a href="{% url 'add_artist' %}">Add an artist</a>
 </center>
+</span>
 {% endblock %}

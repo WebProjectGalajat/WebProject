@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
-<span vocab="https://schema.org/" typeof="MusicRecording">
 {% block content %}
+<span vocab="https://schema.org/" typeof="MusicRecording">
 <h1 property="name">
     {{ favourite_song.name }}
 </h1>
@@ -28,5 +28,5 @@
 <a href="{% url 'modify_song' favourite_song.id %}">Edit song</a>
 <a href="{% url 'delete_song' favourite_song.id %}">Delete song</a>
 <a href="{% url 'songs_list' %}">Back to the list</a>
-{% endblock %}
 </span>
+{% endblock %}
