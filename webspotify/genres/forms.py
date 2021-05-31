@@ -11,4 +11,4 @@ class GenreForm(ModelForm):
 class GenreEditForm(ModelForm):
 	class Meta:
 		model = Favourite_Genre
-		exclude = ('user', 'name', 'artist_name')
+		exclude = ('user', 'name' )

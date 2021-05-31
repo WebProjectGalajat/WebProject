@@ -5,6 +5,8 @@ from .forms import SongForm
 from django.http import HttpResponseRedirect
 
 def song_list(req):
+	if not req.user.is_authenticated:
+		return HttpResponseRedirect("/")
 	all_songs = Favourite_Song.objects.order_by('user')
 	dic = {'songs': []}
 	for song in all_songs:
@@ -13,6 +15,8 @@ def song_list(req):
 	return render(req, 'webspotify/songs/songs_list.html', dic)
 
 def delete_song(req, pk):
+	if not req.user.is_authenticated:
+		return HttpResponseRedirect("/")
 	Favourite_Song.objects.filter(id=pk).delete()
 	return HttpResponseRedirect("/songs/")
 

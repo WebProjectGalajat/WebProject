@@ -5,7 +5,10 @@ from .forms import ArtistForm
 import requests as r
 from django.http import JsonResponse, HttpResponseRedirect
 
+
 def artist_list(req):
+	if not req.user.is_authenticated:
+		return HttpResponseRedirect("/")
 	all_songs = Favourite_Artist.objects.order_by('user')
 	dic = {'artists': []}
 	for song in all_songs:
@@ -13,9 +16,13 @@ def artist_list(req):
 			dic['artists'].append(song)
 	return render(req, 'webspotify/artists/artists_list.html', dic)
 
+
 def delete_artist(req, pk):
+	if not req.user.is_authenticated:
+		return HttpResponseRedirect("/")
 	Favourite_Artist.objects.filter(id=pk).delete()
 	return HttpResponseRedirect("/artists/")
+
 
 def database_search(req, as_list=False, term=None):
 	if not as_list:
@@ -47,6 +54,7 @@ def database_search(req, as_list=False, term=None):
 			return names
 		return []
 
+
 def get_my_artists(req):
 	response = []
 	if 'term' in req.GET:
@@ -63,7 +71,7 @@ def get_my_artists(req):
 	while len(response) > 10:
 		response = response[:-1]
 	print(response)
-	return JsonResponse(response,safe=False)
+	return JsonResponse(response, safe=False)
 
 
 class CreateArtist(CreateView):

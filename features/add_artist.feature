@@ -9,4 +9,4 @@ Feature: Afegir artista
     Scenario: The artist exists
         Given I login as user "user" with password "password"
         When I type an artist "artist"
-        Then I'm viewing the artist details containing
+        Then I'm viewing the artist details containing 1 artist
