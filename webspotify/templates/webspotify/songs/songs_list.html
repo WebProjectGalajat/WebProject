@@ -1,11 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
+<span vocab="https://schema.org/" typeof="SongsList">
 <center>
-<h1>List of songs by {{ user.username }} </h1>
+<h1>List of songs by <span property="user">{{ user.username }}</span></h1>
+<ul rel="songs">
 {% for son in songs %}
-<li><a href="{% url 'song_detail' son.id %}"><b>{{ son.name }}</b></a> - {{ son.artist_name }} <i>Rating: {{ son.rating }} </i></li>
+<li rel="song" typeof="MusicRecording"><span property="name"><a href="{% url 'song_detail' son.id %}"><b>{{ son.name }}</b></a></span>
+- <span property="byArtist">{{ son.artist_name }}</span>
+<span rel="rating">
+<span typeof="Rating">
+    <span property="worstRating" content="0"></span>
+        <span property="ratingValue">
+            <i>Rating: {{ son.rating }} </i>
+        </span>
+    <span property="bestRating" content="5"></span>
+</span>
+</span>
+</li>
 {% endfor %}
+</ul>
 <a href="{% url 'add_song' %}">Add a song</a>
 </center>
+</span>
 {% endblock %}

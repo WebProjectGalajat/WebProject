@@ -1,11 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
+<span vocab="https://schema.org/" typeof="GenresList">
 <center>
-<h1>List of genres by {{ user.username }} </h1>
+<h1>List of genres by <span property="user">{{ user.username }}</span> </h1>
+<ul rel="genres">
 {% for gen in genres %}
-<li><a href="{% url 'genre_detail' gen.id %}"><b>{{ gen.name }}</b></a> - <i>Rating: {{ gen.rating }} </i></li>
+    <li rel="genre" typeof="MusicGenre"><span property="name"><a href="{% url 'genre_detail' gen.id %}"><b>{{ gen.name }}</b></a></span>
+    -
+<span rel="rating">
+<span typeof="Rating">
+    <span property="worstRating" content="0"></span>
+        <span property="ratingValue">
+            <i>Rating: {{ gen.rating }} </i>
+        </span>
+    <span property="bestRating" content="5"></span>
+</span>
+</span>
+</li>
 {% endfor %}
+</ul>
 <a href="{% url 'add_genre' %}">Add a genre</a>
 </center>
+</span>
 {% endblock %}
